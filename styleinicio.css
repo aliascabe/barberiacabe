@@ -1,0 +1,259 @@
+/* Añade esto al final de style.css */
+
+/* Estilos generales de autenticación */
+.auth-container {
+    background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-card h2 {
+    color: #2d2d2d;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.auth-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+/* Formularios mejorados */
+.auth-card .form-label {
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+}
+
+.auth-card .form-control {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.auth-card .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(197, 162, 103, 0.2);
+}
+
+/* Botones premium */
+.btn-dark {
+    background: linear-gradient(45deg, #2d2d2d 0%, #1a1a1a 100%);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.btn-dark:hover::before {
+    left: 100%;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Panel de administración */
+#adminPanel {
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.navbar-admin {
+    background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar-admin .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 10px 20px !important;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-admin .nav-link:hover,
+.navbar-admin .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color) !important;
+}
+
+/* Tablas mejoradas */
+.table-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    background: white;
+}
+
+thead {
+    background: linear-gradient(45deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+}
+
+th {
+    font-weight: 600;
+    padding: 15px !important;
+    border-bottom: 2px solid var(--secondary-color) !important;
+}
+
+td {
+    padding: 12px !important;
+    vertical-align: middle !important;
+}
+
+tbody tr {
+    transition: all 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: rgba(197, 162, 103, 0.05);
+    transform: translateX(5px);
+}
+
+/* Modales modernos */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 20px;
+}
+
+.modal-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.close-btn {
+    color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* Botones flotantes */
+.btn-open-modal {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    float: right;
+    margin-bottom: 20px !important;
+}
+
+.btn-open-modal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(197, 162, 103, 0.3);
+}
+
+/* Efectos de hover */
+[class*="-card"] {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[class*="-card"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.btn-dark {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--secondary-color);
+    color: white;
+}
